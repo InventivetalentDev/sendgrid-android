@@ -7,7 +7,7 @@
     <version>7</version>
   </parent>
   <groupId>com.sendgrid</groupId>
-  <artifactId>sendgrid-java</artifactId>
+  <artifactId>sendgrid-android</artifactId>
   <name>Twilio SendGrid Java helper library</name>
   <version>4.4.7</version>
   <description>This Java module allows you to quickly and easily send emails through Twilio SendGrid using Java.</description>
@@ -273,8 +273,8 @@
   <dependencies>
     <dependency>
       <groupId>com.sendgrid</groupId>
-      <artifactId>java-http-client</artifactId>
-      <version>[4.2,5.0)</version>
+      <artifactId>java-okhttp-client</artifactId>
+      <version>5.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -304,4 +304,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
 </project>
