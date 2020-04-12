@@ -1,13 +1,13 @@
 package com.sendgrid.helpers;
 
 import com.sendgrid.helpers.mail.objects.Attachments;
-import org.apache.commons.codec.binary.Base64;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.util.Base64;
 
 public class AttachmentBuilderTest {
 
@@ -30,7 +30,7 @@ public class AttachmentBuilderTest {
         Assert.assertEquals(attachments.getFilename(), fileName);
         Assert.assertEquals(attachments.getContentId(), contentId);
         Assert.assertEquals(attachments.getDisposition(), dispositon);
-        Assert.assertEquals(attachments.getContent(), Base64.encodeBase64String(content.getBytes(Charset.forName("UTF-8"))));
+        Assert.assertEquals(attachments.getContent(), Base64.getEncoder().encodeToString(content.getBytes(Charset.forName("UTF-8"))));
     }
 
     @Test(expected = IllegalArgumentException.class)

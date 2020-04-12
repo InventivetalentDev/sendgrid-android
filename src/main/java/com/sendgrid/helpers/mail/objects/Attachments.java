@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.apache.commons.codec.binary.Base64;
 
 import java.io.*;
+import java.util.Base64;
 
 /**
  * An attachment object.
@@ -192,7 +192,7 @@ public class Attachments {
           baos.write(bytes, 0, read);
         }
 
-        return Base64.encodeBase64String(baos.toByteArray());
+        return Base64.getEncoder().encodeToString(baos.toByteArray());
       } catch (IOException e) {
         throw new RuntimeException("Unable to convert content stream to base 64 encoded string", e);
       }
