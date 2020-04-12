@@ -272,8 +272,8 @@
   <packaging>jar</packaging>
   <dependencies>
     <dependency>
-      <groupId>com.sendgrid</groupId>
-      <artifactId>java-okhttp-client</artifactId>
+      <groupId>com.github.InventivetalentDev</groupId>
+      <artifactId>sendgrid-java-http-client</artifactId>
       <version>5.0.0</version>
     </dependency>
     <dependency>
